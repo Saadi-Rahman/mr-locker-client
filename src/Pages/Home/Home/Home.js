@@ -2,7 +2,7 @@ import React from 'react';
 import Banner from '../Banner/Banner';
 import About from '../About/About';
 import MainServices from '../MainServices/MainServices';
-import WhyMrLocker from '../WhyMrLocker/WhyMrLocker';
+import WhyChoose from '../WhyChoose/WhyChoose';
 
 const Home = () => {
     return (
@@ -10,7 +10,8 @@ const Home = () => {
             <Banner></Banner>
             <About></About>
             <MainServices></MainServices>
-            <WhyMrLocker></WhyMrLocker>
+            <WhyChoose></WhyChoose>
+            <About></About>
         </div>
     );
 };

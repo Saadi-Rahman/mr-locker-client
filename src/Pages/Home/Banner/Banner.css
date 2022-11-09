@@ -1,12 +1,21 @@
-.bg-image {
+.bg-banner {
     background-image: url('https://img1.goodfon.com/original/1920x1080/c/1d/locksmith-key-lock-metal-wood.jpg');
-    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 600px;
 }
 
-.mask {
+.mask-banner {
     background-color: rgba(0, 0, 0, 0.6);
     height: 600px;
+}
+
+.bg-why-choose {
+    background-image: url('https://img1.goodfon.com/original/1920x1080/c/1d/locksmith-key-lock-metal-wood.jpg');
+    height: auto;
+}
+
+.mask-why-choose {
+    background-color: rgba(0, 0, 0, 0.745);
+    height: auto;
 }

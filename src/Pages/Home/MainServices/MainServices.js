@@ -4,15 +4,14 @@ import { Link } from 'react-router-dom';
 
 const MainServices = () => {
     return (
-        <div className='container my-5 pt-5'>
+        <section className='container my-5 pt-5'>
             <div className='text-center mb-5'>
                 <h2 className="fs-1 fw-bold mb-3">Main Locksmith Services</h2>
                 <p>We working only with licensed locksmith, all our locksmiths contractors pass background check and all approve with 
                 <br /> locksmith Association of America, they must be licensed bonded and insured to work with us. Our customer service is our first <br /> priority and we want to make sure you have great experience with our service.</p>
             </div>
-            <div className=''>
-                <div className="row pb-5 mb-4">
-
+            <div>
+                <div className="row mb-5">
                     <div className="col-lg-4 col-md-6 mb-4 mb-lg-0">
                         <div className="card rounded shadow-lg border-0">
                             <div className="card-body p-4"><img src="https://bootstrapious.com/i/snippets/sn-cards/shoes-1_gthops.jpg" alt="" className="img-fluid d-block mx-auto mb-3" />
@@ -67,10 +66,12 @@ const MainServices = () => {
                             </div>
                         </div>
                     </div>
-                    
+                </div>
+                <div className='d-flex justify-content-center'>
+                    <Link to="/services" className="btn btn-warning px-4 py-2 fs-5 fw-semibold text-decoration-none">See All Services</Link>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

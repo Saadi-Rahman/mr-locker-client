@@ -4,8 +4,8 @@ import './Banner.css';
 
 const Banner = () => {
     return (
-        <div className='bg-image'>
-            <div className="mask">
+        <div className='bg-banner'>
+            <div className="mask-banner">
                 <div className="d-flex justify-content-center align-items-center h-100">
                     <div className="text-white">
                     <h1 className="display-3 fw-bold mb-3">Local Emergency Locksmith <br /> Services in Charlotte NC</h1>

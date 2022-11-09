@@ -1,0 +1,41 @@
+.base-color {
+    background-color: #07294d;
+}
+
+.semibase-color {
+    background-color: rgb(12 74 110);
+}
+
+.text-navy {
+    color: #07294d;
+}
+
+.navbar-thin {
+    height: 40px;
+    font-size: medium;
+}
+
+.navbar-wide {
+    min-height: 120px;
+}
+
+.navbar-wide-items {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 10px;
+    flex-grow: 1;
+}
+
+
+.navbar-wide-items li {
+    font-size: larger;
+    font-weight: 700;
+}
+
+.btn-logout {
+    padding: 0;
+    border: none;
+    margin-right: 24px;
+    background-color: transparent;
+    color: white;
+}

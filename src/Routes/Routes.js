@@ -31,7 +31,7 @@ export const routes = createBrowserRouter([
         path: '*',
         element: 
         <div className='d-flex justify-content-center align-items-center flex-column vh-100'>
-          <p className='display-1 fw-bold text-primary'>404</p>
+          <p className='display-1 fw-bold text-warning'>404</p>
           <p className='fs-4 fw-bold'>Not Found!</p>
           <p>Woops!! Looks like this page doesn't exist!</p>
         </div>

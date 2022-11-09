@@ -1,18 +1,16 @@
 import React from 'react';
-import About from '../About/About';
 import Banner from '../Banner/Banner';
+import About from '../About/About';
 import MainServices from '../MainServices/MainServices';
-import Welcome from '../Welcome/Welcome';
 import WhyMrLocker from '../WhyMrLocker/WhyMrLocker';
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <Welcome></Welcome>
+            <About></About>
             <MainServices></MainServices>
             <WhyMrLocker></WhyMrLocker>
-            <About></About>
         </div>
     );
 };

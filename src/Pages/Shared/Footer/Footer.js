@@ -1,14 +1,13 @@
 import React from 'react';
 import { FaInstagram, FaLinkedin, FaTwitter, FaPinterest, FaFacebookSquare, FaYelp, FaPhoneAlt, FaPrint, FaEnvelope, FaHome } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-import './Footer.css';
 
 const Footer = () => {
     return (
         <div className="container-fluid px-0">
             <footer className="text-center text-lg-start text-white bg-dark">
                 <div className="container pt-5 px-md-0">
-                    <section className="">
+                    <section>
                         <div className="row">
                             <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                                 <h6 className="fs-2 fw-bold mb-3 font-weight-bold">Mr. Locker</h6>

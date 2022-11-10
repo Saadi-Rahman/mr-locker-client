@@ -4,14 +4,13 @@ import { FaStar } from 'react-icons/fa';
 const CustomerReviews = () => {
     return (
         <div>
-            <div className='bg-dark px-3 py-2'>
-                <h5 className='fw-semibold text-warning mb-0'>Customer Reviews</h5>
-            </div>
             <section className='bg-light pb-3'>
-                <div className="container py-5 text-dark">
-                    <div className="row d-flex justify-content-center">
+                <div className="container pb-5 text-dark">
+                    <h4 className='fw-bold text-dark ps-2 pt-3'>Customer Reviews</h4>
+                    <hr className='m-0' />
+                    <div className="row d-flex justify-content-center mt-4">
                         <div className="col-md-11">
-                            <div className="d-flex flex-start mb-4">
+                            <div className="d-flex flex-start my-4">
                                 <img className="rounded-circle shadow-1-strong me-3"
                                 src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(32).webp" alt="avatar" width="65" height="65" />
                                 <div className="card w-100">

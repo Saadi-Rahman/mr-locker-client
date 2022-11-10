@@ -16,7 +16,7 @@ const ServiceDetails = () => {
 
             <div className='container my-5 pt-3'>
                 <div className='row'>
-                    <div className='col-md-9'>
+                    <div className='col-md-8'>
                         <div className='mb-5'>
                             <div className='bg-secondary'>
                                 <img src="https://i.postimg.cc/br2kqKMX/1.jpg" alt="" className="img-fluid d-block mx-auto" />
@@ -38,7 +38,7 @@ const ServiceDetails = () => {
                             <CustomerReviews></CustomerReviews>
                         </div>
                     </div>
-                    <div className='col-md-3 mb-5'>
+                    <div className='col-md-4 mb-5'>
                         <RightSidebar></RightSidebar>
                     </div>
                 </div>

@@ -10,12 +10,12 @@
     height: 600px;
 }
 
-.bg-why-choose {
+.bg-banner-comon {
     background-image: url('https://i.postimg.cc/g2dwXw5B/mr-Locker-banner.jpg');
     height: auto;
 }
 
-.mask-why-choose {
+.mask-comon {
     background-color: rgba(0, 0, 0, 0.745);
     height: auto;
 }

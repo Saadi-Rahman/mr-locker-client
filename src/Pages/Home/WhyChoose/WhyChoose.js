@@ -4,8 +4,8 @@ import { FaLaptop, FaPhoneAlt, FaRegBell, FaRegThumbsUp } from 'react-icons/fa';
 const WhyChoose = () => {
     return (
         <div className='text-center my-5 pt-5'>
-            <div className='bg-why-choose'>
-                <div className="mask-why-choose">
+            <div className='bg-banner-comon'>
+                <div className="mask-comon">
                     <div className="container d-flex justify-content-center align-items-center h-100">
                         <div className="row my-5">
                             <h1 className="text-warning fw-bold mb-3">Why Choose Mr. Locker Locksmith</h1>

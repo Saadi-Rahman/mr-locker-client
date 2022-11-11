@@ -8,7 +8,7 @@ const RightSidebar = () => {
             <Card border="light">
                 <Card.Header className='fs-5 fw-semibold text-dark'>More Services</Card.Header>
                 <Card.Body>
-                    <img src="https://i.postimg.cc/4Np7xv89/g12.jpg" alt="" className="img-fluid d-block mx-auto mb-3" />
+                    <img src="https://i.postimg.cc/br2kqKMX/1.jpg" alt="" className="img-fluid d-block mx-auto mb-3" />
                     <Card.Title className='text-dark fw-bold'>List of Locksmith Services</Card.Title>
                     <Card.Text>
                         Mr. Locker Locksmith provides all types of Locksmith services. We offer fast, friendly and professional locksmith services across Charlotte.

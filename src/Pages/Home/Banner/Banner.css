@@ -19,3 +19,10 @@
     background-color: rgba(0, 0, 0, 0.745);
     height: auto;
 }
+
+.bg-banner2 {
+    background-image: url('https://i.postimg.cc/P5GTqb1Z/banner2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150px;
+}

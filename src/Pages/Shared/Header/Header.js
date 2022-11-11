@@ -17,13 +17,19 @@ const Header = () => {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-wide-items navbar-nav me-auto mb-2 p-lg-0 mb-lg-0">
                             <li className="nav-item">
-                                <NavLink className={({isActive}) => isActive ? "nav-link text-dark" : "nav-link"} to="/home">HOME</NavLink>
+                                <NavLink className={({isActive}) => isActive ? "nav-link text-warning" : "nav-link"} to="/home">HOME</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className={({isActive}) => isActive ? "nav-link text-dark" : "nav-link"} to="services">SERVICES</NavLink>
+                                <NavLink className={({isActive}) => isActive ? "nav-link text-warning" : "nav-link"} to="services">SERVICES</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className={({isActive}) => isActive ? "nav-link text-dark" : "nav-link"} to="blog">BLOG</NavLink>
+                                <NavLink className={({isActive}) => isActive ? "nav-link text-warning" : "nav-link"} to="addService">ADD SERVICE</NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink className={({isActive}) => isActive ? "nav-link text-warning" : "nav-link"} to="myReviews">MY REVIEWS</NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink className={({isActive}) => isActive ? "nav-link text-warning" : "nav-link"} to="blog">BLOG</NavLink>
                             </li>
                             <li className='nav-item'>
                                 {

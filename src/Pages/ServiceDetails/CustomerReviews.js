@@ -44,11 +44,7 @@ const CustomerReviews = () => {
                                         <div className="">
                                             <h5>Mindy Campbell</h5>
                                             <p className="small"><FaStar className='text-warning fs-5 me-2 mb-1' /><span>5.0</span> <span className='ms-3'>3 hours ago</span></p>
-                                            <p>
-                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus
-                                            cumque doloribus dolorum dolor repellat nemo animi at iure autem fuga
-                                            cupiditate architecto ut quam provident neque, inventore nisi eos quas?
-                                            </p>
+                                            <p>Very quick and professional! The same day my smart lock was delivered I called these fine people to take the stress off. He was at my house in 30 mins and was done installing my lock in 20 mins! Wow!</p>
                                         </div>
                                     </div>
                                 </div>

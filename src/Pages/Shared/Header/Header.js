@@ -31,12 +31,22 @@ const Header = () => {
                             <li className="nav-item">
                                 <NavLink className={({isActive}) => isActive ? "nav-link text-warning" : "nav-link"} to="services">SERVICES</NavLink>
                             </li>
-                            <li className="nav-item">
-                                <NavLink className={({isActive}) => isActive ? "nav-link text-warning" : "nav-link"} to="addService">ADD SERVICE</NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <NavLink className={({isActive}) => isActive ? "nav-link text-warning" : "nav-link"} to="myReviews">MY REVIEWS</NavLink>
-                            </li>
+                            {
+                                user?.uid ?
+                                <li className="nav-item">
+                                    <NavLink className={({isActive}) => isActive ? "nav-link text-warning" : "nav-link"} to="addService">ADD SERVICE</NavLink>
+                                </li>
+                                :
+                                <li className='d-none'></li>
+                            }
+                            {
+                                user?.uid ?
+                                <li className="nav-item">
+                                    <NavLink className={({isActive}) => isActive ? "nav-link text-warning" : "nav-link"} to="myReviews">MY REVIEWS</NavLink>
+                                </li>
+                                :
+                                <li className='d-none'></li>
+                            }
                             <li className="nav-item">
                                 <NavLink className={({isActive}) => isActive ? "nav-link text-warning" : "nav-link"} to="blog">BLOG</NavLink>
                             </li>

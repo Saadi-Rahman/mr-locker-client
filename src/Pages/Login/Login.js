@@ -69,7 +69,7 @@ const Login = () => {
                     </Form>
                     <p className='text-danger'>{error}</p>
                     <hr className="d-inline-block mx-auto w-100" />
-                    <Button onClick={handleGoogleSignIn} variant="outline-warning w-100 py-2" type="submit"><FaGoogle className='me-1' /> Continue with Google</Button>
+                    <Button onClick={handleGoogleSignIn} variant="outline-warning w-100 py-2 mt-1" type="submit"><FaGoogle className='me-1' /> Continue with Google</Button>
                     <p className='mt-2'><small>New to this website? Please <Link to='/register'>Register</Link> </small></p>
                 </div>
             </div>

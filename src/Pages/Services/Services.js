@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaStar } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import ServiceCard from './ServiceCard';
 
 const Services = () => {
+    const [services, setServices] = useState([]);
+    useEffect( () => {
+        fetch('services.json')
+        .then(res => res.json())
+        .then(data => setServices(data))
+    }, [])
+
     return (
         <div className='pb-5'>
             <div className='bg-banner-comon'>
@@ -14,12 +22,20 @@ const Services = () => {
             </div>
             <div className='container my-5'>
                 <div className='text-center mb-5'>
-                    <h2 className="fs-1 fw-bold mb-3">Mr. Lockers' Locksmith Services</h2>
+                    <h2 className="fs-1 fw-bold mb-3">Mr. Lockers' all Locksmith Services: {services.length}</h2>
                     <p>We working only with licensed locksmith, all our locksmiths contractors pass background check and all approve with 
                     <br /> locksmith Association of America, they must be licensed bonded and insured to work with us. Our customer service is our first <br /> priority and we want to make sure you have great experience with our service.</p>
                 </div>
 
                 <div className="row mb-5">
+
+                    {
+                        services.map(service => <ServiceCard
+                            key={service._id}
+                            service={service}
+                        ></ServiceCard>)
+                    }
+
                     <div className="col-lg-4 col-md-6 mb-4">
                         <div className="card rounded shadow-lg border-0">
                             <div className="card-body p-4"><img src="https://i.postimg.cc/br2kqKMX/1.jpg" alt="" className="img-fluid d-block mx-auto mb-3 rounded" />

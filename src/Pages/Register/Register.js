@@ -3,7 +3,6 @@ import { Form } from 'react-bootstrap';
 import toast from 'react-hot-toast';
 import { Link, Navigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
-import './Register.css';
 
 const Register = () => {
     const [error, setError] = useState('');
@@ -70,7 +69,7 @@ const Register = () => {
                             <Form.Control type="password" name='password' placeholder="Enter your Password" required />
                         </Form.Group>
                         <p className='text-danger'>{error}</p>
-                        <button className='btn btn-warning w-100 py-2 mt-1' type='submit'>Register</button>
+                        <button className='btn btn-warning fw-semibold w-100 py-2 mt-1' type='submit'>Register</button>
                     </Form>
                     <p className='mt-2'><small>Already have an account? Please <Link to='/login'>Login</Link></small></p>
                 </div>

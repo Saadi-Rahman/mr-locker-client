@@ -43,7 +43,7 @@ const AddService = () => {
                                                 <label className="form-label">Service Description</label>
                                                     <textarea className="form-control" rows="3" placeholder='Write a Description of your Service'></textarea>
                                                 </div>
-                                                <button type="submit" className="btn btn-warning w-100">Submit</button>
+                                                <button type="submit" className="btn btn-warning fw-semibold w-100 py-2">Submit</button>
                                             </form>
                                         </div>
                                     </div>

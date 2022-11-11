@@ -8,6 +8,7 @@ import MyReviews from "../Pages/MyReviews/MyReviews";
 import Register from "../Pages/Register/Register";
 import ServiceDetails from "../Pages/ServiceDetails/ServiceDetails";
 import Services from "../Pages/Services/Services";
+import PrivateRoute from "./PrivateRoute";
 
 export const routes = createBrowserRouter([
     {
@@ -29,15 +30,15 @@ export const routes = createBrowserRouter([
             {
                 path: '/serviceDetails/:id',
                 element: <ServiceDetails></ServiceDetails>,
-                loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
+                loader: ({params}) => fetch(`https://mr-locker-server.vercel.app/services/${params.id}`)
             },
             {
                 path: '/addService',
-                element: <AddService></AddService>
+                element: <PrivateRoute><AddService></AddService></PrivateRoute>
             },
             {
                 path: '/myReviews',
-                element: <MyReviews></MyReviews>
+                element: <PrivateRoute><MyReviews></MyReviews></PrivateRoute>
             },
             {
                 path: '/blog',

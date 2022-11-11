@@ -1,8 +1,15 @@
-import React from 'react';
-import { FaStar } from 'react-icons/fa';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import ServiceCard from '../../Services/ServiceCard';
 
 const MainServices = () => {
+    const [services, setServices] = useState([]);
+    useEffect( () => {
+        fetch('https://mr-locker-server.vercel.app/services')
+        .then(res => res.json())
+        .then(data => setServices(data))
+    }, [])
+
     return (
         <section className='container my-5 pt-5'>
             <div className='text-center mb-5'>
@@ -12,59 +19,12 @@ const MainServices = () => {
             </div>
             <div className='pb-2'>
                 <div className="row mb-4">
-                    <div className="col-lg-4 col-md-6 mb-4">
-                        <div className="card rounded shadow-lg border-0">
-                            <div className="card-body p-4"><img src="https://i.postimg.cc/br2kqKMX/1.jpg" alt="" className="img-fluid d-block mx-auto mb-3 rounded" />
-                            <h5>Automotive Locksmith</h5>
-                            <h6>Price: $150</h6>
-                            <p className="small text-muted font-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            <div className="text-muted d-flex justify-content-between align-items-center mt-3 mb-2">
-                                    <div>
-                                        <FaStar className='text-warning fs-5 me-2 pb-1' /><span>5.0</span>
-                                    </div>
-                                    <div>
-                                        <Link className='btn btn-warning text-decoration-none' to="/serviceDetails">View Details</Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="col-lg-4 col-md-6 mb-4">
-                        <div className="card rounded shadow-lg border-0">
-                            <div className="card-body p-4"><img src="https://i.postimg.cc/bYGBGdfP/2.jpg" alt="" className="img-fluid d-block mx-auto mb-3 rounded" />
-                            <h5>Residential Locksmith</h5>
-                            <h6>Price: $150</h6>
-                            <p className="small text-muted font-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            <div className="text-muted d-flex justify-content-between align-items-center mt-3 mb-2">
-                                    <div>
-                                        <FaStar className='text-warning fs-5 me-2 pb-1' /><span>5.0</span>
-                                    </div>
-                                    <div>
-                                        <Link className='btn btn-warning text-decoration-none' to="/serviceDetails">View Details</Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="col-lg-4 col-md-6 mb-4">
-                        <div className="card rounded shadow-lg border-0">
-                            <div className="card-body p-4"><img src="https://i.postimg.cc/pyb8rsbm/3.jpg" alt="" className="img-fluid d-block mx-auto mb-3 rounded" />
-                                <h5>Locks Change & Replacement</h5>
-                                <h6>Price: $150</h6>
-                                <p className="small text-muted font-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <div className="text-muted d-flex justify-content-between align-items-center mt-3 mb-2">
-                                    <div>
-                                        <FaStar className='text-warning fs-5 me-2 pb-1' /><span>5.0</span>
-                                    </div>
-                                    <div>
-                                        <Link className='btn btn-warning text-decoration-none' to="/serviceDetails">View Details</Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                   {
+                        services.map(service => <ServiceCard
+                            key={service._id}
+                            service={service}
+                        ></ServiceCard>)
+                    }
                 </div>
                 <div className='d-flex justify-content-center'>
                     <Link to="/services" className="btn btn-warning px-4 py-2 fs-5 fw-semibold text-decoration-none shadow">See All Services</Link>

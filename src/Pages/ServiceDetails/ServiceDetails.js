@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { FaStar } from 'react-icons/fa';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import RightSidebar from '../Shared/RightSidebar/RightSidebar';
 // import CustomerReviews from './CustomerReviews';
@@ -26,7 +26,7 @@ const ServiceDetails = () => {
             message
         }
         
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://mr-locker-server.vercel.app/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -102,7 +102,12 @@ const ServiceDetails = () => {
                                                             <div className="mb-3">
                                                                 <textarea name='message' className="form-control" rows="3" placeholder='Write your message' required></textarea>
                                                             </div>
-                                                            <button type="submit" className="btn btn-warning btn-sm">Leave a review</button>
+                                                            {
+                                                                user?.uid ?
+                                                                <button type="submit" className="btn btn-warning btn-sm">Leave a review</button>
+                                                                :
+                                                                <Link to="/login" className='btn btn-warning btn-sm'>Leave a review</Link>
+                                                            }
                                                         </form>
                                                     </div>
                                                 </div>

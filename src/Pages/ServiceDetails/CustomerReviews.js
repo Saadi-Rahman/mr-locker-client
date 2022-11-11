@@ -1,7 +1,7 @@
-import React from 'react';
 import { FaStar } from 'react-icons/fa';
 
 const CustomerReviews = () => {
+
     return (
         <div>
             <section className='bg-light pb-3'>
@@ -12,7 +12,7 @@ const CustomerReviews = () => {
                         <div className="col-md-11">
                             <div className="d-flex flex-start my-4">
                                 <img className="rounded-circle shadow-1-strong me-3"
-                                src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(32).webp" alt="avatar" width="65" height="65" />
+                                src="" alt="avatar" width="65" height="65" />
                                 <div className="card w-100">
                                     <div className="card-body p-4">
                                         <div className="">
@@ -20,14 +20,14 @@ const CustomerReviews = () => {
                                             <form>
                                                 <div className='d-md-flex gap-3'>
                                                     <div className="mb-3 w-100">
-                                                        <input type="text" className="form-control" placeholder='Name' />
+                                                        <input name='name' type="text" className="form-control" placeholder='Name' defaultValue="" readOnly />
                                                     </div>
                                                     <div className="mb-3 w-100">
-                                                        <input type="text" className="form-control" placeholder='Add a Ratting between 1-5' />
+                                                        <input name='rating' type="text" className="form-control" placeholder='Add a Ratting between 1-5' />
                                                     </div>
                                                 </div>
                                                 <div className="mb-3">
-                                                    <textarea className="form-control" rows="3" placeholder='Write your message'></textarea>
+                                                    <textarea name='message' className="form-control" rows="3" placeholder='Write your message'></textarea>
                                                 </div>
                                                 <button type="submit" className="btn btn-warning btn-sm">Submit</button>
                                             </form>

@@ -1,11 +1,20 @@
-import React from 'react';
-import { Button, Container, Navbar, OverlayTrigger, Tooltip } from 'react-bootstrap';
+import React, { useContext } from 'react';
+import { Button, Container, Image, Navbar, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { FaSignInAlt, FaSignOutAlt, FaUser, FaInstagram, FaLinkedin, FaTwitter, FaPinterest, FaFacebookSquare, FaRegEnvelope, FaYelp } from "react-icons/fa";
 import { Link, NavLink } from 'react-router-dom';
 import navLogo from '../../../assets/logo.png';
+import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 import './Header.css';
 
 const Header = () => {
+    const { user, logOut } = useContext(AuthContext)
+
+    const handleLogOut = () => {
+        logOut()
+        .then( () => {})
+        .catch(error => console.error(error))
+    }
+
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-wide bg-body">
@@ -15,7 +24,7 @@ const Header = () => {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-wide-items navbar-nav me-auto mb-2 p-lg-0 mb-lg-0">
+                        <ul className="navbar-wide-items align-items-center navbar-nav me-auto mb-2 p-lg-0 mb-lg-0">
                             <li className="nav-item">
                                 <NavLink className={({isActive}) => isActive ? "nav-link text-warning" : "nav-link"} to="/home">HOME</NavLink>
                             </li>
@@ -33,26 +42,26 @@ const Header = () => {
                             </li>
                             <li className='nav-item'>
                                 {
-                                    // user?.uid ?
-                                    // <>
-                                    //     <OverlayTrigger
-                                    //         delay={{ hide: 400, show: 200 }}
-                                    //         overlay={(props) => (
-                                    //         <Tooltip {...props}>{user?.displayName}</Tooltip>
-                                    //         )}
-                                    //         placement="bottom"
-                                    //         ><Image className='ms-2' style={{width: '35px'}} roundedCircle src={user.photoURL} alt="user"></Image>
-                                    //     </OverlayTrigger>
-                                    //     <OverlayTrigger
-                                    //         delay={{ hide: 400, show: 200 }}
-                                    //         overlay={(props) => (
-                                    //         <Tooltip {...props}>Logout</Tooltip>
-                                    //         )}
-                                    //         placement="bottom"
-                                    //         ><Button onClick={handleLogOut} variant='outline-dark mb-lg-0 ms-4'><FaSignOutAlt className='mb-1' /></Button>
-                                    //     </OverlayTrigger>
-                                    // </>
-                                    // :
+                                    user?.uid ?
+                                    <>
+                                        <OverlayTrigger
+                                            delay={{ hide: 400, show: 200 }}
+                                            overlay={(props) => (
+                                            <Tooltip {...props}>{user?.displayName}</Tooltip>
+                                            )}
+                                            placement="bottom"
+                                            ><Image className='ms-2' style={{width: '35px'}} roundedCircle src={user.photoURL} alt="user"></Image>
+                                        </OverlayTrigger>
+                                        <OverlayTrigger
+                                            delay={{ hide: 400, show: 200 }}
+                                            overlay={(props) => (
+                                            <Tooltip {...props}>Logout</Tooltip>
+                                            )}
+                                            placement="bottom"
+                                            ><Button onClick={handleLogOut} variant='outline-dark mb-lg-0 ms-4'><FaSignOutAlt className='mb-1' /></Button>
+                                        </OverlayTrigger>
+                                    </>
+                                    :
                                     <>
                                         <OverlayTrigger
                                             delay={{ hide: 400, show: 200 }}
@@ -85,14 +94,6 @@ const Header = () => {
                     </Navbar.Text>
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">
-                    <Navbar.Text>
-                        {/* {
-                            user?.uid ?
-                            <button onClick={handleLogOut} className="btn-logout">Logout</button>
-                            :
-                            <Link className='text-light text-decoration-none me-4' to="/login">Login</Link>
-                        } */}
-                    </Navbar.Text>
                     <Navbar.Text>
                         <Link className='text-dark text-decoration-none me-3'><FaFacebookSquare /></Link>
                         <Link className='text-dark text-decoration-none me-3'><FaPinterest /></Link>

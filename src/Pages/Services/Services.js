@@ -23,7 +23,7 @@ const Services = () => {
                     <h2 className="fs-1 fw-bold mb-3">Mr. Lockers' Locksmith Services</h2>
                     <p>We working only with licensed locksmith, all our locksmiths contractors pass background check and all approve with 
                     <br /> locksmith Association of America, they must be licensed bonded and insured to work with us. Our customer service is our first <br /> priority and we want to make sure you have great experience with our service.</p>
-                    <h5>Mr. Locker provides {services.length} types of Locksmith services.</h5>
+                    <h5>We provide {services.length} types of Locksmith services.</h5>
                 </div>
 
                 <div className="row mb-5">
